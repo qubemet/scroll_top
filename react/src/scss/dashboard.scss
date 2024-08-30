@@ -1,0 +1,484 @@
+.settings_page_qmt-scroll #wpcontent {
+  padding-left: 0;
+}
+#qmt-scroll-dashboard {
+  font-family: auto, serif;
+  color: #000000;
+
+  .qmt-scroll-header,
+  .qmt-scroll-site-info,
+  .qmt-scroll-tabs
+  {
+    display: flex;
+    align-items: center;
+  }
+
+  .qmt-scroll-site-info, .qmt-scroll-tabs .qmt-scroll-tab {
+    padding: 15px;
+  }
+
+  .qmt-scroll-header {
+    background-color: #fbfbfb;
+    .qmt-scroll-site-info {
+      gap: 10px;
+      border-right: 1px solid #c4c4c4;
+      padding-right: 25px;
+      .qmt-scroll-name {
+        font-size: 25px;
+      }
+      .qmt-scroll-version {
+        font-size: 14px;
+        border: 1px solid #b4b4b4;
+        padding: 5px 10px;
+        border-radius: 4px;
+        background: #f6f6f6;
+      }
+    }
+    .qmt-scroll-tabs {
+      gap: 20px;
+      padding-left: 25px;
+      font-size: 16px;
+      .qmt-scroll-tab {
+        cursor: pointer;
+      }
+      .qmt-scroll-active {
+        color: #007bff;
+      }
+    }
+  }
+
+  .qmt-scroll-body {
+    width: 95%;
+    margin: 20px auto 0;
+  }
+
+  .qmt-scroll-tab-content {
+    display: flex;
+    gap: 40px;
+    .qmt-scroll-fields {
+      flex-basis: 70%;
+    }
+    .qmt-scroll-action {
+      position: sticky;
+      top: 40px;
+      height: fit-content;
+      flex-basis: 30%;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      .qmt-scroll-action-header {
+        background: #c9c6c6;
+        padding: 8px 10px;
+        font-size: 16px;
+      }
+      .qmt-scroll-action-body {
+        padding: 30px 15px;
+        background: #fff;
+        .qmt-scroll-save {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          border: none;
+          background: #31987c;
+          color: #fff;
+          padding: 10px;
+          border-radius: 3px;
+          cursor: pointer;
+        }
+        &.qmt-scroll-support-body {
+          margin: 0;
+          li {
+            font-size: 14px;
+            list-style: disc;
+            line-height: 20px;
+            margin-left: 15px;
+            a {
+                margin: 0 5px;
+                text-decoration: none;
+                font-weight: bold;
+              }
+          }
+        }
+      }
+    }
+  }
+
+  //Container Style
+  .qmt-scroll-field, .qmt-scroll-field-container {
+    background-color: #ffffff;
+  }
+  .qmt-scroll-field-container {
+    .qmt-scroll-field {
+      margin-bottom: 10px;
+      &:not(:last-child) {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  //All field style
+  .qmt-scroll-field {
+    margin-bottom: 20px;
+    padding: 25px;
+    .qmt-scroll-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      align-items: center;
+    }
+    .qmt-scroll-label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 15px;
+      font-weight: 600;
+    }
+    input {
+      margin: 0;
+      border-radius: unset;
+      &:focus {
+        outline: 0;
+        border-color: unset;
+        box-shadow: unset;
+      }
+      &[type=text] {
+        width: 100%;
+        padding: 7px;
+      }
+    }
+  }
+
+  //Toggle field style
+ .qmt-scroll-field-toggle {
+   .qmt-scroll-toggle-control {
+     display: flex;
+     gap: 15px;
+   }
+   .qmt-scroll-desc {
+     font-size: 14px;
+     color: #736C66;
+   }
+  .qmt-scroll-toggle.qmt-scroll-toggle-checked {
+     opacity: 1;
+     &:after {
+       left: calc(100% - 3px);
+       transform: translateX(-100%);
+     }
+   }
+   .qmt-scroll-toggle {
+     width: 36px;
+     height: 18px;
+     display: block;
+     cursor: pointer;
+     border-radius: 100px;
+     text-indent: -9999px;
+     background-color: #037FFFFF;
+     opacity: 0.5;
+     position: relative;
+     &::after {
+       content: "";
+       position: absolute;
+       top: 3px;
+       bottom: 3px;
+       left: 3px;
+       width: 12px;
+       border-radius: 90px;
+       background: #FFFFFFFF;
+       transition: 0.3s;
+     }
+   }
+ }
+
+  //Number field style
+  input[type=number] {
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      margin: 0;
+    }
+    height: 40px;
+    border: 1px solid #333;
+    width: 100%;
+    max-width: 75px;
+  }
+  .qmt-scroll-field-number {
+    .qmt-scroll-input-group {
+      display: flex;
+      align-items: center;
+      width: fit-content;
+    }
+    .qmt-scroll-qty-ctrl {
+      display: flex;
+      align-items: center;
+      padding: 6px;
+      cursor: pointer;
+      background: #000000;
+      svg path {
+        stroke: #ffffff;
+      }
+    }
+  }
+
+  //Select dropdown field style
+  .qmt-scroll-dropdown-container {
+    position: relative;
+    .qmt-scroll-selected {
+      &, .qmt-icon {
+        display: flex;
+        align-items: center;
+      }
+      padding: 10px 15px;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .qmt-scroll-selected, .qmt-scroll-dropdown {
+      border: 1px solid #cdc7c7;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .qmt-scroll-dropdown {
+      margin-top: 5px;
+      position: absolute;
+      width: 100%;
+      background: #ffffff;
+      z-index: 1;
+      box-sizing: border-box;
+
+      .qmt-item {
+        padding: 10px 15px;
+        border-bottom: 1px solid #cdc7c7;
+        &:last-child {
+          border-bottom: none;
+        }
+        &:hover, &.qmt-scroll-active {
+          background-color: #0d6efd;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+
+  //Icon dropdown field style
+ .qmt-scroll-field-icon {
+   svg {
+     width: 22px;
+     height: 20px;
+   }
+   .qmt-scroll-dropdown {
+     display: grid;
+     grid-template-columns: repeat(6, 1fr);;
+     gap: 5px;
+     padding: 15px;
+     align-items: center;
+     .qmt-item {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       border-bottom: unset;
+       padding: 10px;
+       width: fit-content;
+       background: #dedede;
+       &:hover, &.qmt-scroll-active {
+         fill: #ffffff;
+       }
+     }
+   }
+ }
+
+  //Dimension field
+  .qmt-scroll-field-dimension {
+    .qmt-scroll-input-group {
+      .qmt-scroll-box {
+        display: inline-block;
+        input[type=number] {
+          width: 100%;
+          max-width: 66px;
+          padding: 0 8px;
+          height: 30px;
+          &:not(:last-child) {
+            border-right: none;
+          }
+        }
+        &.qmt-scroll-lock {
+          background: #000;
+          height: 30px;
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          vertical-align: top;
+          width: 50px;
+          cursor: pointer;
+          .dashicons {
+            color: #ffffff;
+          }
+        }
+      }
+
+    }
+  }
+
+  //Common style
+  .qmt-scroll-typo-field .qmt-scroll-tools-item,
+  .qmt-scroll-color-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 38px;
+    border: 1px solid #333;
+  }
+
+  //Color group style
+  .qmt-scroll-color-group {
+    display: flex;
+    gap: 20px;
+    padding: 0 10px;
+    width: fit-content;
+    .qmt-scroll-field-color {
+      &:nth-child(2) {
+        border-left: none;
+        padding-left: 0;
+      }
+      &:not(:only-child):first-child {
+        border-right: none; // Remove border-right from the first child if 2nd child exist
+      }
+    }
+  }
+
+  //Color field
+  .qmt-scroll-color-select {
+    position: relative;
+    display: flex;
+    .qmt-scroll-color {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      border-radius: 30px;
+      border: 1px solid #d2d3d5;
+    }
+    .qmt-scroll-color-popup {
+      position: absolute;
+      right: 100%;
+      top: 100%;
+      z-index: 99;
+      padding: 0px 10px 0px 10px;
+      background: rgb(255, 255, 255);
+      border-radius: 4px;
+      box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px, rgba(0, 0, 0, 0.15) 0px 8px 16px;
+
+      .qmt-scroll-top-toolbar {
+        display: flex;
+        align-items: center;
+        padding: 10px 0;
+        gap: 15px;
+      }
+      .qmt-scroll-reset-settings {
+        font-size: 16px !important;
+        color: #e21111 !important;
+        cursor: pointer;
+      }
+      .qmt-scroll-empty-color-wrap {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        cursor: pointer;
+        padding: 2px 4px;
+        &:hover {
+          background-color: #ededed;
+        }
+      }
+      .qmt-scroll-empty-color {
+        position: relative;
+        overflow: hidden;
+        background: white !important;
+        width: 18px;
+        height: 18px;
+        border-radius: 2px;
+        border: 1px solid rgba(0, 0, 0, 0.12);
+        &:after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 200%;
+          border-top: 3px solid #eb5648;
+          transform-origin: 0 0;
+          transform: rotate(-45deg) translate(-50%, -50%);
+        }
+      }
+
+      .sketch-picker {
+        padding: 0 !important;
+        background: none !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+      }
+    }
+  }
+
+  //Typography field
+  .qmt-scroll-typo-field {
+    display: flex;
+    align-items: center;
+    .qmt-scroll-tools-item {
+      gap: 20px;
+      border-left: 0;
+      border-right: 0;
+      padding: 0 24px;
+      svg {
+        cursor: pointer;
+      }
+      .qmt-scroll-active svg path {
+        stroke: #4189ff;
+      }
+    }
+  }
+
+  //Tooltip style
+  .qmt-scroll-tools-item .qmt-scroll-tooltip:hover .qmt-scroll-tooltip-text {
+    top: -30px;
+  }
+  .qmt-scroll-tooltip {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    .qmt-scroll-tooltip-text {
+      display: none;
+    }
+    &:hover .qmt-scroll-tooltip-text {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      top: -28px;
+      background: #333;
+      color: #fff;
+      padding: 3px 10px;
+      border-radius: 3px;
+      white-space: nowrap;
+      z-index: 9;
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        transform: rotate(45deg);
+        width: 9px;
+        height: 9px;
+        background: #333;
+        border-radius: 2px;
+      }
+    }
+  }
+}
+.qmt-scroll-loading {
+  -webkit-animation: qmtScrollLoader 1.5s linear infinite;
+  animation: qmtScrollLoader 1.5s linear infinite;
+}
+
+//keyframe
+@keyframes qmtScrollLoader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

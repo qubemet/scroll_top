@@ -1,0 +1,108 @@
+// Flex Function
+@mixin flex($gap: 0) {
+    display: flex;
+    flex-direction: column;
+    @if $gap > 0 {
+        gap: $gap + px;
+    }
+}
+
+.qmt-scroll-toast {
+    position: absolute;
+}
+.qmt-scroll-toast-messages {
+    @include flex(10);
+    padding: 10px;
+    position: fixed;
+    right: 400px;
+    z-index: 1001;
+    top: 70px;
+}
+.qmt-scroll-toaster {
+    position: fixed;
+    visibility: hidden;
+    width: 345px;
+    background-color: #fefefe;
+    height: 76px;
+    border-radius: var(--productx-border-radius);
+    box-shadow: 0px 0px 4px #9f9f9f;
+    display: flex;
+    align-items: center;
+    span{
+        display: block;
+    }
+    .itmCenter{
+        font-size: var(--productx-text-sm-size);
+    }
+    .itmLast{
+        padding: 0 15px;
+        margin-left: auto;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        border-left: 1px solid #f2f2f2;;
+        &:hover{
+            cursor: pointer;
+            background-color: #f2f2f2;
+        }
+    }
+    &.show{
+        visibility: visible;
+        -webkit-animation: fadeinmessage 0.7s;
+        animation: fadeinmessage 0.7s;
+    }
+}
+.qmt-scroll-toast-circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: #7ac142;
+    fill: none;
+    animation: strokemessage 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+.qmt-scroll-toast-animation {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 2;
+    margin: 10px;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    box-shadow: inset 0px 0px 0px #7ac142;
+    animation: fillmessage .4s ease-in-out .4s forwards, scalemessage .3s ease-in-out .9s both;
+    margin-right: 10px;
+}
+.qmt-scroll-toast-check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: strokemessage 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+.qmt-scroll-toast-cross {
+    stroke: red;
+    fill: red;
+}
+@keyframes fadeinmessage {
+    from {right: 0; opacity: 0;}
+    to {right: 65px; opacity: 1;}
+}
+@keyframes strokemessage {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes scalemessage {
+    0%, 100% {
+        transform: none;
+    }
+    50% {
+        transform: scale3d(1.1, 1.1, 1);
+    }
+}
+@keyframes fillmessage {
+    100% {
+        box-shadow: inset 0px 0px 0px 30px #7ac142;
+    }
+}

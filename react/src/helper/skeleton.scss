@@ -1,0 +1,44 @@
+.qmt_scroll_skeleton__image {
+    border-radius: var(--productx-border-radius);
+}
+.qmt_scroll_skeleton__circle {
+    border-radius: 50%;
+}
+.qmt_scroll_skeleton__title {
+    height: 20px;
+    width: 100%;
+    border-radius: var(--productx-border-radius);
+}
+.qmt_scroll_skeleton__button {
+    height: 40px;
+    border-radius: var(--productx-border-radius);
+}
+.qmt_scroll_frequency {
+    position: relative;
+    background-color: #dedede;
+    overflow: hidden;
+    &.loop {
+        margin-bottom: 10px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+.qmt_scroll_frequency::after {
+    width: 100%;
+    height: 100%;
+    content: "";
+    display: block;
+    position: absolute;
+    transform: translateX(-100%);
+    background: linear-gradient(90deg, transparent,rgba(184, 184, 184, 0.5), transparent);
+    animation: loadings 1.5s infinite;
+}
+.skeletonOverflow {
+    overflow: hidden;
+}
+@keyframes loadings {
+    100% {
+        transform: translateX(100%);
+    }
+}
