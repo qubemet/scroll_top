@@ -9,26 +9,26 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-08-16T05:15:56+00:00\n"
+"POT-Creation-Date: 2024-08-31T09:26:33+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.10.0\n"
 "X-Domain: qmt-scroll\n"
 
 #. Plugin Name of the plugin
 #: G:\laragon\www\wp_product\wp-content\plugins\qmt-scroll\qmt-scroll.php
-#: classes/QmtScroll.php:69
+#: build/qmt-scroll/classes/QmtScroll.php:72
+#: classes/QmtScroll.php:72
 msgid "Scroll Top - Qubemet"
 msgstr ""
 
 #. Plugin URI of the plugin
-#. Author URI of the plugin
 #: G:\laragon\www\wp_product\wp-content\plugins\qmt-scroll\qmt-scroll.php
-msgid "https://qubemet.com/"
+msgid "https://qubemet.com/scroll-top/"
 msgstr ""
 
 #. Description of the plugin
 #: G:\laragon\www\wp_product\wp-content\plugins\qmt-scroll\qmt-scroll.php
-msgid "Manage Scroll to Top button to your WordPress website."
+msgid "Enables visitors to easily scroll back to the top of the page."
 msgstr ""
 
 #. Author of the plugin
@@ -36,159 +36,228 @@ msgstr ""
 msgid "Qubemet"
 msgstr ""
 
-#: classes/QmtScroll.php:68
+#. Author URI of the plugin
+#: G:\laragon\www\wp_product\wp-content\plugins\qmt-scroll\qmt-scroll.php
+msgid "https://qubemet.com/"
+msgstr ""
+
+#: build/qmt-scroll/classes/QmtScroll.php:71
+#: classes/QmtScroll.php:71
 #: assets/js/dashboard.js:2
+#: build/qmt-scroll/assets/js/dashboard.js:2
 msgid "Scroll Top"
 msgstr ""
 
+#: build/qmt-scroll/classes/QmtScroll.php:131
+#: classes/QmtScroll.php:131
+#: assets/js/dashboard.js:2
+#: build/qmt-scroll/assets/js/dashboard.js:2
+msgid "Settings"
+msgstr ""
+
+#: build/qmt-scroll/classes/QmtScroll.php:132
+#: classes/QmtScroll.php:132
+#: assets/js/dashboard.js:2
+#: build/qmt-scroll/assets/js/dashboard.js:2
+msgid "Support"
+msgstr ""
+
+#: build/qmt-scroll/classes/RestApi.php:95
 #: classes/RestApi.php:95
 msgid "Settings Saved Successfully."
 msgstr ""
 
 #: assets/js/dashboard.js:2
+#: build/qmt-scroll/assets/js/dashboard.js:2
 msgid "Action"
 msgstr ""
 
 #: assets/js/dashboard.js:2
+#: build/qmt-scroll/assets/js/dashboard.js:2
 msgid "Save Changes"
 msgstr ""
 
 #: assets/js/dashboard.js:2
+#: build/qmt-scroll/assets/js/dashboard.js:2
+msgid "Have any issues? For quick support you can"
+msgstr ""
+
+#: assets/js/dashboard.js:2
+#: build/qmt-scroll/assets/js/dashboard.js:2
+msgid "Contact"
+msgstr ""
+
+#: assets/js/dashboard.js:2
+#: build/qmt-scroll/assets/js/dashboard.js:2
+msgid "You can direct contact through email"
+msgstr ""
+
+#: assets/js/dashboard.js:2
+#: build/qmt-scroll/assets/js/dashboard.js:2
 msgid "Bold"
 msgstr ""
 
 #: assets/js/dashboard.js:2
+#: build/qmt-scroll/assets/js/dashboard.js:2
 msgid "Italic"
 msgstr ""
 
 #: assets/js/dashboard.js:2
+#: build/qmt-scroll/assets/js/dashboard.js:2
 msgid "Underline"
 msgstr ""
 
 #: assets/js/dashboard.js:2
+#: build/qmt-scroll/assets/js/dashboard.js:2
 msgid "Normal"
 msgstr ""
 
 #: assets/js/dashboard.js:2
+#: build/qmt-scroll/assets/js/dashboard.js:2
 msgid "Hover"
 msgstr ""
 
 #: assets/js/dashboard.js:2
-msgid "Settings"
-msgstr ""
-
-#: assets/js/dashboard.js:2
+#: build/qmt-scroll/assets/js/dashboard.js:2
 msgid "Enable this option to display it on your website"
 msgstr ""
 
 #: assets/js/dashboard.js:2
+#: build/qmt-scroll/assets/js/dashboard.js:2
 msgid "Enable Icon"
 msgstr ""
 
 #: assets/js/dashboard.js:2
+#: build/qmt-scroll/assets/js/dashboard.js:2
 msgid "Enable this option to display icon on button"
 msgstr ""
 
 #: assets/js/dashboard.js:2
+#: build/qmt-scroll/assets/js/dashboard.js:2
 msgid "Disable On Mobile"
 msgstr ""
 
 #: assets/js/dashboard.js:2
+#: build/qmt-scroll/assets/js/dashboard.js:2
 msgid "Enable this option to hide the 'Scroll to Top' button on mobile devices"
 msgstr ""
 
 #: assets/js/dashboard.js:2
+#: build/qmt-scroll/assets/js/dashboard.js:2
 msgid "Enable Text"
 msgstr ""
 
 #: assets/js/dashboard.js:2
+#: build/qmt-scroll/assets/js/dashboard.js:2
 msgid "Enable this option to display text on button"
 msgstr ""
 
 #: assets/js/dashboard.js:2
+#: build/qmt-scroll/assets/js/dashboard.js:2
 msgid "Text"
 msgstr ""
 
 #: assets/js/dashboard.js:2
+#: build/qmt-scroll/assets/js/dashboard.js:2
 msgid "Choose Icon"
 msgstr ""
 
 #: assets/js/dashboard.js:2
+#: build/qmt-scroll/assets/js/dashboard.js:2
 msgid "Icon Position"
 msgstr ""
 
 #: assets/js/dashboard.js:2
+#: build/qmt-scroll/assets/js/dashboard.js:2
 msgid "Before Text"
 msgstr ""
 
 #: assets/js/dashboard.js:2
+#: build/qmt-scroll/assets/js/dashboard.js:2
 msgid "After Text"
 msgstr ""
 
 #: assets/js/dashboard.js:2
+#: build/qmt-scroll/assets/js/dashboard.js:2
 msgid "Scroll Position"
 msgstr ""
 
 #: assets/js/dashboard.js:2
+#: build/qmt-scroll/assets/js/dashboard.js:2
 msgid "Left"
 msgstr ""
 
 #: assets/js/dashboard.js:2
+#: build/qmt-scroll/assets/js/dashboard.js:2
 msgid "Right"
 msgstr ""
 
 #: assets/js/dashboard.js:2
+#: build/qmt-scroll/assets/js/dashboard.js:2
 msgid "Scroll Animation"
 msgstr ""
 
 #: assets/js/dashboard.js:2
+#: build/qmt-scroll/assets/js/dashboard.js:2
 msgid "Select Animation"
 msgstr ""
 
 #: assets/js/dashboard.js:2
+#: build/qmt-scroll/assets/js/dashboard.js:2
 msgid "Fade"
 msgstr ""
 
 #: assets/js/dashboard.js:2
+#: build/qmt-scroll/assets/js/dashboard.js:2
 msgid "Flip"
 msgstr ""
 
 #: assets/js/dashboard.js:2
+#: build/qmt-scroll/assets/js/dashboard.js:2
 msgid "Slide Up"
 msgstr ""
 
 #: assets/js/dashboard.js:2
+#: build/qmt-scroll/assets/js/dashboard.js:2
 msgid "Slide Left"
 msgstr ""
 
 #: assets/js/dashboard.js:2
+#: build/qmt-scroll/assets/js/dashboard.js:2
 msgid "Slide Right"
 msgstr ""
 
 #: assets/js/dashboard.js:2
+#: build/qmt-scroll/assets/js/dashboard.js:2
 msgid "Style"
 msgstr ""
 
 #: assets/js/dashboard.js:2
+#: build/qmt-scroll/assets/js/dashboard.js:2
 msgid "Typography"
 msgstr ""
 
 #: assets/js/dashboard.js:2
+#: build/qmt-scroll/assets/js/dashboard.js:2
 msgid "Padding(px)"
 msgstr ""
 
 #: assets/js/dashboard.js:2
+#: build/qmt-scroll/assets/js/dashboard.js:2
 msgid "Icon Size(px)"
 msgstr ""
 
 #: assets/js/dashboard.js:2
+#: build/qmt-scroll/assets/js/dashboard.js:2
 msgid "Button and Text gap(px)"
 msgstr ""
 
 #: assets/js/dashboard.js:2
+#: build/qmt-scroll/assets/js/dashboard.js:2
 msgid "Scroll Offset(px)"
 msgstr ""
 
 #: assets/js/dashboard.js:2
+#: build/qmt-scroll/assets/js/dashboard.js:2
 msgid "Button Opacity(%)"
 msgstr ""

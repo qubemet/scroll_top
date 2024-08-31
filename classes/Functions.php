@@ -10,7 +10,7 @@ defined('ABSPATH') || exit;
 
 class Functions
 {
-    private static ?Functions $instance = null;
+    private static $instance = null;
     /**
      * [__construct] Class constructor
      *

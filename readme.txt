@@ -1,6 +1,6 @@
 === Scroll Top - Qubemet ===
-Contributors: jsjisan
-Tags: scroll to top, back to top, scroll top, scroll up, wordpress scroll top
+Contributors: qubemet
+Tags: scroll to top, back to top, scroll top, scroll up, move top
 Requires at least: 5.0
 Tested up to: 6.6.1
 Requires PHP: 7.0

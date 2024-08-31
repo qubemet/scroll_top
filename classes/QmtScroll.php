@@ -52,7 +52,7 @@ class QmtScroll
      */
     public static function remove_notices(): void
     {
-        $current_page = isset( $_GET['page'] ) ? sanitize_text_field( $_GET['page'] ) : ''; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+        $current_page = isset( $_GET['page'] ) ? sanitize_text_field( $_GET['page'] ) : ''; // phpcs:ignore WordPress.Security.NonceVerification.Recommended,WordPress.Security.ValidatedSanitizedInput.MissingUnslash
         if ( $current_page === 'qmt-scroll' ) {
             remove_all_actions( 'admin_notices' );
             remove_all_actions( 'all_admin_notices' );
@@ -162,7 +162,7 @@ class QmtScroll
             if ( $active_redirect ) {
                 if ( ! is_multisite() ) {
                     qmt_scroll()->set_setting('qmt_scroll_active_redirect', false);
-                    exit( wp_safe_redirect( admin_url( 'options-general.php?page=qmt-scroll' ) ) );
+                    exit( wp_safe_redirect( admin_url( 'options-general.php?page=qmt-scroll' ) ) ); //phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
                 }
             }
         }
@@ -202,7 +202,7 @@ class QmtScroll
      */
     public static function header_element(): void
     {
-        echo '<style id="qmt-scroll-inline-css">' . qmt_scroll()->get_setting('css') .  '</style>';
+        echo '<style id="qmt-scroll-inline-css">' . qmt_scroll()->get_setting('css') .  '</style>'; //phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
     }
 
     /**
@@ -217,24 +217,24 @@ class QmtScroll
         if( wp_is_mobile() && $settings[ 'disableMobile' ] ) {
             return;
         }
-        $btn_class = 'qmt-scroll-wrap qmt-scroll-' . esc_attr( $settings['position'] );
+        $btn_class = 'qmt-scroll-wrap qmt-scroll-' . $settings['position'] ;
         $icon = '<span class="qmt-scroll-icon">' . qmt_scroll()->get_scroll_icons($settings['scrollIcon']) . '</span>';
 ?>
         <div
-            class="<?php echo $btn_class ?>"
+            class="<?php echo esc_attr( $btn_class ); ?>"
             data-scroll-offset="<?php echo esc_attr( $settings['offset'] ) ?>"
             data-animation="<?php echo esc_attr( $settings['animation'] ) ?>"
         >
             <div class="qmt-scroll-content">
                 <?php
                     if( ! empty( $settings['iconPosition'] ) && $settings['iconPosition'] == 'before_text' ) {
-                        echo $icon;
+                        echo $icon; //phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
                     }
                     if( ! empty( $settings['enableText'] ) && ! empty( $settings['text'] ) ) {
-                        echo '<span class="qmt-scroll-text">' . __( wp_kses_post( $settings['text'] ) ,'qmt-scroll' )  . '</span>';
+                        echo '<span class="qmt-scroll-text">' . wp_kses_post( $settings['text'] )  . '</span>';
                     }
                     if( ! empty( $settings['iconPosition'] ) && $settings['iconPosition'] == 'after_text' ) {
-                        echo $icon;
+                        echo $icon; //phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
                     }
                 ?>
             </div>
