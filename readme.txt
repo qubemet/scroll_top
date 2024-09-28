@@ -19,6 +19,9 @@ Scroll Top - Qubemet is a plugin from <a href="https://qubemet.com" target="_bla
 * Attractive animation.
 * Dynamic style like color, background, size.
 
+= Author =
+Developed by [Qubemet](https://qubemet.com). [Contribute to Scroll Top - Qubemet on Github](https://github.com/qubemet/scroll_top) and join the party.
+
 == Installation ==
 
 1. Click Plugins/Add New from the WordPress admin panel.

@@ -202,7 +202,7 @@ class QmtScroll
      */
     public static function header_element(): void
     {
-        echo '<style id="qmt-scroll-inline-css">' . qmt_scroll()->get_setting('css') .  '</style>'; //phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
+        echo '<style id="qmt-scroll-internal-css">' . qmt_scroll()->get_setting('css') .  '</style>'; //phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
     }
 
     /**
