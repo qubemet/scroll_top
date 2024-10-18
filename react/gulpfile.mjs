@@ -5,7 +5,11 @@ import concat from 'gulp-concat'
 import cleanCSS from 'gulp-clean-css'
 import gulpAutoprefixer from 'gulp-autoprefixer'
 import zip from 'gulp-zip'
+import { readFile } from 'fs/promises';
 const sass = gulpSass(dartSass)
+const packageJson = JSON.parse(
+	await readFile(new URL('./package.json', import.meta.url))
+);
 
 const styles = [
 	{ name: 'dashboard', src: './src/scss/dashboard.scss', dest: '../assets/css', file: 'dashboard.min.css' },
@@ -49,7 +53,7 @@ gulp.task('copy_files', function() {
 
 gulp.task('zip', function() {
 	return gulp.src(`../build/${folderName}/**`)
-		.pipe(zip('qmt-scroll.zip'))
+		.pipe(zip(`qmt-scroll-${packageJson.version}.zip`))
 		.pipe(gulp.dest(`../build`))
 });
 

@@ -3,7 +3,7 @@
  * Plugin Name: Scroll Top - Qubemet
  * Plugin URI:  https://qubemet.com/scroll-top/
  * Description: Enables visitors to easily scroll back to the top of the page.
- * Version:     1.0.0
+ * Version:     1.0.1
  * Author:      Qubemet
  * Author URI:  https://qubemet.com/
  * License:     GPLv3
@@ -14,7 +14,7 @@
 defined( 'ABSPATH' ) || exit;
 
 // Define Constants
-define( 'QMT_SCROLL_VER', '1.0.0' );
+define( 'QMT_SCROLL_VER', '1.0.1' );
 define( 'QMT_SCROLL_URL', plugin_dir_url( __FILE__ ) );
 define( 'QMT_SCROLL_BASE', plugin_basename( __FILE__ ) );
 define( 'QMT_SCROLL_PATH', plugin_dir_path( __FILE__ ) );

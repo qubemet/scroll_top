@@ -43,8 +43,15 @@
                     scrollButton.addClass('qmt-scroll-flip-out');
                 }
             },
+            default: {
+                show: () => {
+                    scrollButton.show();
+                },
+                hide: () => {
+                    scrollButton.hide();
+                }
+            },
         };
-
         if (offset > 0 && animations[animationType]) {
             $(window).on('scroll', function () {
                 if ($(this).scrollTop() > offset) {

@@ -223,7 +223,7 @@ class QmtScroll
         <div
             class="<?php echo esc_attr( $btn_class ); ?>"
             data-scroll-offset="<?php echo esc_attr( $settings['offset'] ) ?>"
-            data-animation="<?php echo esc_attr( $settings['animation'] ) ?>"
+            data-animation="<?php echo ! empty( $settings['animation'] ) ? esc_attr( $settings['animation'] ) : 'default' ?>"
         >
             <div class="qmt-scroll-content">
                 <?php
